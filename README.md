@@ -1,2 +1,2 @@
-# having_fun
-A short (now) project just to enjoy writing some code... Do not expect nothing serious here, it is just for fun.
+# Scripts_for_teaching
+Just a place to write some scripts to teach simple concepts
