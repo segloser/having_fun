@@ -24,6 +24,7 @@ do
 	read PROTOCOL
 done 
 
+# Defining sorting function - It sorts all ports according to frequency and filter according to two parameters (PORT/PROTOCOL)
 function sorting {
 	POS=$(cat /usr/share/nmap/nmap-services | sort -rk 3,3 | awk {'print $2'} | grep "/" | grep -v http | grep -ni "$1/$2" | grep ":$1/")
 	echo -n "The port $1/$2 is in position: "
