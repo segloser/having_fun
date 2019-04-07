@@ -1,0 +1,12 @@
+https://www.microsoft.com/en-us/software-download/windows10ISO
+
+https://images.offensive-security.com/virtual-images/kali-linux-2019.1-vbox-amd64.ova
+
+https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+
+https://sourceforge.net/projects/bodhilinux/files/5.0.0/bodhi-5.0.0-64.iso/download
+
+https://digital-forensics.sans.org/community/download-sift-kit/3.0
+
+https://cdimage.parrotsec.org/parrot/iso/4.5.1/Parrot-security-4.5.1_virtual.ova
+
