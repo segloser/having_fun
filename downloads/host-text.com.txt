@@ -1,0 +1,4 @@
+test.com has address 69.172.200.235
+test.com mail is handled by 30 lastmx.spamexperts.net.
+test.com mail is handled by 20 fallbackmx.spamexperts.eu.
+test.com mail is handled by 10 mx.spamexperts.com.
