@@ -22,9 +22,12 @@ echo
 read -p "Press ENTER to install mongodb-org"
 sudo apt install mongodb-org
 echo
-echo -e "Press ENTER to install the following"
-echo -e "===================================="
-read -e "psycopg2 \ndistorm3 \npycrypto \nopenpyxl \npydeep \nvolatility \npyopenssl"
+echo -e "The following list of packages will be installed"
+echo -e "================================================"
+echo -e "psycopg2 \ndistorm3 \npycrypto \nopenpyxl \npydeep \nvolatility \npyopenssl"
+echo
+read -p "Press ENTER to proceed with the installation."
+echo
 sudo -H pip install psycopg2 distorm3 pycrypto openpyxl
 sudo -H pip install git+https://github.com/kbandla/pydeep.git
 sudo -H pip install git+https://github.com/volatilityfoundation/volatility.git
