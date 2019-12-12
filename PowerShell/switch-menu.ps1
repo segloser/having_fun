@@ -6,18 +6,18 @@ function Show-Menu
      cls
      Write-Host "================ $Title ================"
     
-     Write-Host "1: Press '1' for pinging your subnetwork."
-     Write-Host "2: Press '2' for checking connected ports."
-     Write-Host "3: Press '3' for getting information of the OS and registered user."
-     Write-Host "Q: Press 'Q' to quit."
+     Write-Host "1: Type '1' and press ENTER to ping your subnetwork."
+     Write-Host "2: Type '2' and press ENTER to check connected ports."
+     Write-Host "3: Type '3' and press ENTER to get information of the OS and registered user."
+     Write-Host "q: Type 'q' and press ENTER to quit."
 }
 
 Function PingSub 
 {
     Foreach ($i in $oct = 1..254)
     {
-        $myHost = "192.168.0."+$i
-        Write-Host "Pinging on 192.168.0.0/24"
+        $myHost = "192.168.38."+$i
+        Write-Host "Pinging on 192.168.38.$i"
         Write-Host "========================="
         ping -n 1 -w 2 $myHost | Select-String "bytes=32"
     }
@@ -25,9 +25,9 @@ Function PingSub
 
 Function EstablishedCon
 {
-    Write-Host "The following connections are ESTABLISHED"
+    Write-Host "The following TCP connections are ESTABLISHED"
     Write-Host "========================================="
-    netstat -bano | Select-String ESTABLISHED
+    netstat -ano | Select-String ESTABLISHED | Select-String TCP
 }
 
 Function GetOSInfo
@@ -40,7 +40,7 @@ Function GetOSInfo
 do
 {
      Show-Menu
-     $input = Read-Host "Please make a selection"
+     $input = Read-Host "`nPlease, make a selection"
      switch ($input)
      {
            '1' {
