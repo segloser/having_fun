@@ -1,0 +1,1 @@
+Just find the only human-readable HASH comparing the auth.json and the syslog-x files
