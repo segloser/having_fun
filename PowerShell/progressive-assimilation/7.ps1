@@ -78,7 +78,7 @@ Function PingSub
 {
     Foreach ($i in $oct = 1..254)
     {
-        $myHost = "192.168.38."+$i
+        $myHost = "192.168.1."+$i
         Write-Host "Pinging on 192.168.1.$i"
         Write-Host "========================="
         ping -n 1 -w 2 $myHost | Select-String "bytes=32"
